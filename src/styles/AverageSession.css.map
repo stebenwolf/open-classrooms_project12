@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,gBAAgB,EAAE,cAAc;EAChC,KAAK,EAAE,KAAK;EACZ,IAAI,EAAE,QAAQ;CACjB;;AAED,AAAA,wBAAwB,CAAC;EACrB,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,OAAO;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,IAAI;CACpB",
+    "sources": [
+        "AverageSession.scss"
+    ],
+    "names": [],
+    "file": "AverageSession.css"
+}

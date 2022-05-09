@@ -1,0 +1,51 @@
+.scoreGraph {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background-color: #FBFBFB;
+}
+
+.scoreGraph .recharts-surface {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.custom-tooltip--score {
+  background-color: blue;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.scoreP {
+  color: blue;
+  font-size: 26px;
+  line-height: 26px;
+  color: #282D30;
+  text-align: center;
+  font-weight: 700;
+  width: 70%;
+}
+
+.scoreP span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #74798c;
+}
+
+.scoreTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 3;
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -54px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 24px 0 0 30px;
+}
+/*# sourceMappingURL=Score.css.map */

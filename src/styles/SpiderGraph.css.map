@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,gBAAgB,EAAE,kBAAkB;EACpC,KAAK,EAAE,KAAK;EACZ,IAAI,EAAE,QAAQ;CACjB",
+    "sources": [
+        "SpiderGraph.scss"
+    ],
+    "names": [],
+    "file": "SpiderGraph.css"
+}

@@ -1,0 +1,43 @@
+.userName {
+    color: #ff0000;
+}
+
+.graphs {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.mainGraphs {
+    width: 74.3%;
+    width: 835px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-right: 31px;
+}
+
+.topGraph {
+    width: 100%;
+}
+
+.secondaryGraphs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+.sideGraph {
+    display: flex;
+    flex-direction: column;
+    width: 258px;
+}
+
+.graph {
+    background-color: #fbfbfb;
+    border-radius: 5px;
+}

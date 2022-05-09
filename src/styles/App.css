@@ -1,0 +1,23 @@
+.userProfile {
+  /*width: calc(1323px - 90px - 109px);*/
+  width: 100%;
+  /* padding: 65px 90px 86px 109px; */
+  padding: 20px 35px;
+  margin-left: 117px;
+  margin-top: 95.2px;
+  text-align: left;
+  z-index: -1;
+
+  /*background-color: blueviolet;*/
+}
+
+.welcomeTitle {
+  font-size: 48px;
+  line-height: 24px;
+  color: #000;
+}
+
+.welcomeMessage {
+  font-size: 18px;
+  font-weight: 400;
+}
