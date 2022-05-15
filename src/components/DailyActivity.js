@@ -3,8 +3,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import '../styles/DailyActivity.css';
 
 import GetData from '../services/services';
+import PropTypes from 'prop-types';
 
-const CustomTooltip = ({ active, payload, label }) => {
+/**
+ * Returns a custom tooltip for the daily activity graph
+ * @param {Object} param - an object made of the active item and the payload content 
+ */
+const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltip--daily">
@@ -21,6 +26,10 @@ const style = {
   color: 'black',
 };
 
+/**
+ * Generate the Daily Activity graph.
+ * @param {Object} id - The  ID of the user.
+ */
 function DailyActivity({id}) {
     const [user, setUser] = useState(null);
 
@@ -67,7 +76,7 @@ function DailyActivity({id}) {
             <YAxis yAxisId={"kilogram"} type='number' axisLine={false} stroke="#9B9EAC" orientation='right' dataKey="kilogram" tick={{ fontSize: '14', fill: '#9B9EAC' }} tickLine={false} domain={['dataMin - 2', 'dataMax + 1']} dx={15} />
             <YAxis orientation='left' yAxisId={"Calories brûles (kCal)"} hide={true} dataKey='calories' type="number" domain={['dataMin - 100', 'dataMax + 100']} />
             
-            <Tooltip content={<CustomTooltip active={""} payload={""} label={""} />} />
+            <Tooltip content={<CustomTooltip active={true} payload={[]} />} />
             
             <Bar yAxisId="kilogram"  dataKey="Poids (kg)" fill="#282D30" barSize={7} radius={[50, 50, 0, 0]} />
             <Bar yAxisId="Calories brûles (kCal)"  dataKey="Calories brûles (kCal)" fill="#E60000" barSize={7} radius={[50, 50, 0, 0]}  />
@@ -77,5 +86,14 @@ function DailyActivity({id}) {
     );
 }
 
+DailyActivity.propTypes = {
+  id: PropTypes.string,
+  data: PropTypes.object,
+};
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+}
 
 export default DailyActivity;

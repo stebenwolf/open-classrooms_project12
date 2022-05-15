@@ -4,6 +4,9 @@ import swimming from '../assets/icon_swimming.svg';
 import biking from '../assets/icon_biking.svg';
 import weight from '../assets/icon_weightlifting.svg';
 
+/**
+ * Returns the footer of the page with different sport icons.
+ */
 function Footer() {
     return (
         <footer>

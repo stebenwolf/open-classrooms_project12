@@ -5,8 +5,11 @@ import Profil from './components/Profil';
 import Footer from './components/Footer';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
+/**
+ * Returns the app structure filled with relevant data (according to the route).
+ */
 function App() {
-  
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -14,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/user/:id" element={<Profil />} />
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </BrowserRouter>

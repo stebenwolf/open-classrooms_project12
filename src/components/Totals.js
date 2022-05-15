@@ -3,10 +3,15 @@ import iconCalories from '../assets/calories-icon.svg';
 import iconProteines from '../assets/protein-icon.svg';
 import iconCarbs from '../assets/carbs-icon.svg';
 import iconFat from '../assets/fat-icon.svg';
+import PropTypes from 'prop-types';
 
 import '../styles/Totals.css';
 import { useState, useEffect } from 'react';
 
+/**
+ * Generates cards with the user totals.
+ * @param {Object} id - The  ID of the user.
+ */
 function Totals({id}) {
 
     const [user, setUserTotals] = useState(null);
@@ -29,13 +34,6 @@ function Totals({id}) {
     const proteinCount = data.proteinCount;
     const carbohydrateCount = data.carbohydrateCount;
     const lipidCount = data.lipidCount;
-
-    //const data = mockedData.USER_MAIN_DATA.filter(item => item.id === id);
-    
-    /* const calorieCount = data[0].keyData.calorieCount;
-    const proteinCount = data[0].keyData.proteinCount;
-    const carbohydrateCount = data[0].keyData.carbohydrateCount;
-    const lipidCount = data[0].keyData.lipidCount; */
 
     return (
         <div className='totalsGraph'>
@@ -79,5 +77,10 @@ function Totals({id}) {
         </div>
     )
 }
+
+Totals.propTypes = {
+    data: PropTypes.object,
+    id: PropTypes.string,
+};
 
 export default Totals;

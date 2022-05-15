@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 import '../styles/Home.css'
 
 import GetData from '../services/services'
+import PropTypes from 'prop-types';
 
+/**
+ * Returns a list item with some user infos.
+ * @param {Object} id - The  ID of the user.
+ */
 function UserItem({id}) {
 
     const [user, setUser] = useState(null);
@@ -29,30 +34,30 @@ function UserItem({id}) {
             {userInfos.firstName} {userInfos.lastName} (ID #{user.data.id})
         </Link>
         </li>
-    )
-    
-
-    
+    );    
 }
 
+/**
+ * Returns the Default Home Page, including a UserItem
+ */
 function Home() {
 
-
     const ids = [12, 18];
-    
-    
-
-    
     
     return (
         <div className="Home">
             <h1>Default Home Page</h1>
             <p>Quel profil utilisateur souhaitez-vous consulter ?</p>
             <ul>
-                {ids.map(item => <UserItem key={`${item}`} id={item}></UserItem>)}
+                {ids.map(item => <UserItem key={`${item}`} id={item.toString()}></UserItem>)}
             </ul>
         </div>
     )
 }
+
+UserItem.propTypes = {
+    id: PropTypes.string,
+    data: PropTypes.object,
+};
 
 export default Home;

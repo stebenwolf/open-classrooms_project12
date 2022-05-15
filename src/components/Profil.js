@@ -10,15 +10,16 @@ import Totals from "./Totals";
 import GetData from "../services/services";
 
 import '../styles/Profil.css';
+import PropTypes from 'prop-types';
 
+/**
+ * Returns the Profil Page of a user.
+ * Retrieves the user's id from the URL and returns all the graphs related to this user.
+ */
 function Profil() {
 
     let userParams = useParams();
     let id = userParams.id;
-
-   /*  const profilNavLink = document.querySelector(".userNav");
-    console.log(profilNavLink);
-    profilNavLink.setAttribute("href",`./${id}`); */
 
     const [user, setUser] = useState(null);
 
@@ -60,5 +61,10 @@ function Profil() {
         </div>
     )
 }
+
+Profil.propTypes = {
+    id: PropTypes.string,
+    data: PropTypes.object,
+};
 
 export default Profil;

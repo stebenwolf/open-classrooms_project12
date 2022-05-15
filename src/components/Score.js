@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 import GetData from '../services/services';
+import PropTypes from 'prop-types';
 
 import '../styles/Score.css';
 
@@ -10,10 +11,22 @@ const style = {
   transform: 'translate(37%, -42%)',
 };
 
+/**
+ * A float number between 0 and 1
+ * @typedef {(number)} Float{0..1}
+ */
+/**
+ * Takes a floating number (ideally between 0 and 1) and returns a custom percentage for the score graph 
+ * @param { Float } percentage - the initial score (ideally between 0 and 1 but would work with other numbers despite being then irrelevant).
+ */
 const endAngle = (percentage) => {
     return -(percentage/100)*360 +180
 };
 
+/**
+ * Generate the Score graph.
+ * @param {Object} id - The  ID of the user.
+ */
 function Score({id}) {
   
   const [user, setUserScore] = useState(null);
@@ -55,5 +68,14 @@ function Score({id}) {
     );
 }
 
+Score.propTypes = {
+  id: PropTypes.string,
+  data: PropTypes.object,
+  style: PropTypes.object,
+};
+
+endAngle.propTypes = {
+  percentage: PropTypes.number,
+}
   
 export default Score;

@@ -2,9 +2,14 @@ import React, {useState, useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis,/*  PolarRadiusAxis, */ ResponsiveContainer } from 'recharts';
 
 import GetData from '../services/services';
+import PropTypes from "prop-types";
 
 import '../styles/SpiderGraph.css';
 
+/**
+ * Generates the Performance graph.
+ * @param {Object} id - The  ID of the user.
+ */
 function SpiderGraph({id}) {
 
     const [user, setUserPerf] = useState(null);
@@ -40,5 +45,9 @@ function SpiderGraph({id}) {
     );
 }
 
+SpiderGraph.propTypes = {
+    id: PropTypes.string,
+    data: PropTypes.object,
+};
 
 export default SpiderGraph;

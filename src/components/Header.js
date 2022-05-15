@@ -3,6 +3,9 @@ import logo from '../assets/logo.svg';
 
 import '../styles/Header.css';
 
+/**
+ * Returns the header of the page, including nav links.
+ */
 function Header() {
     return (
         <header className="App-header">
