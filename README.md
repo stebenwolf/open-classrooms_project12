@@ -1,59 +1,45 @@
 # Getting Started with our SportSee App
 
-Preliminary note: this project uses a [micro back-end API](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard). You can fork that repository and run it locally on port 3000 before starting the SportSee app. You are also free to use Docker.
+The SportSee app displays the personal dashboard of a user. The user has access to several graphs such as:
+* Daily stats (weight and burnt calories)
+* Average session's length (duration)
+* Performance (multi-criteria)
+* Overall score 
+* Agregated food consumption (lipids, carbs, proteines, etc.)
 
-If you are running the micro API somewhere else than "http://localhost:3000" you'll need to update the base URL in services.js 
+## Launch the project
 
-## Available Scripts
+> Preliminary note: this project uses a [micro back-end API](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard). You can fork that repository and run it locally on port 3000 before starting the SportSee app. You are also free to use Docker.
 
-Fork the project. 
-Go to the project root directory and install the project via NPM :
+> If you are running the micro API somewhere else than "http://localhost:3000" you'll need to update the base URL in `src/services/services.js` 
+
+### Fork the project. 
+
+### Go to the project root directory :
+`cd open-classrooms_project12`
+
+### and install the project via NPM :
 `npm install`
 
-To start the project in the development mode you can run :
+### To start the project in the development mode you can run :
 `npm start`
 
 If you already run the back-end API on port 3000 the console will inform you that port 3000 is already used and will ask you if it can use another port (usually port 3001 if free).
 
 Usually you will be automatically redirected to the app. If not, open your favourite browser and go to [http://localhost:3001](http://localhost:3001) to view it running.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### Build the app for production
+`npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+You may serve it with a static server:
+
+`serve -s build`
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
