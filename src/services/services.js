@@ -9,6 +9,7 @@ const prod = true;
  * Calls the relevant function, according to the type of data we expect
  * @param {string} type - the type of data we want to get.
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetData(type, id) {
   let data;
@@ -41,6 +42,7 @@ async function GetData(type, id) {
 /**
  * Fetches the user main data, either from a production version (API based) or a development version (mocked data).
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetUser({id}) {
 
@@ -56,6 +58,7 @@ async function GetUser({id}) {
 /**
  * Fetches the user activity data, either from a production version (API based) or a development version (mocked data).
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetDailyActivity({id}) {
   if (prod) { 
@@ -70,6 +73,7 @@ async function GetDailyActivity({id}) {
 /**
  * Fetches the user's average sessions data, either from a production version (API based) or a development version (mocked data).
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetAverageSessionData({id}) {
   if (prod) {
@@ -84,6 +88,7 @@ async function GetAverageSessionData({id}) {
 /**
  * Fetches the user performance data, either from a production version (API based) or a development version (mocked data).
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetPerformanceData({id}) {
   if (prod) { 
@@ -98,6 +103,7 @@ async function GetPerformanceData({id}) {
 /**
  * Fetches the user's score from user's main data, either from a production version (API based) or a development version (mocked data).
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetScore({id}) {
   if (prod) {
@@ -113,6 +119,7 @@ async function GetScore({id}) {
 /**
  * Fetches the user stats, either from a production version (API based) or a development version (mocked data).
  * @param {Object} id - The  ID of the user.
+ * @returns {Promise <Object>}
  */
 async function GetTotals({id}) {
   if (prod) {

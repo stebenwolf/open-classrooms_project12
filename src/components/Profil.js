@@ -32,7 +32,7 @@ function Profil() {
     }, [id])
 
     if (user === null) {
-        return <p>Loading data...</p>
+        return <p className="errorLoading">Loading data...</p>
     }
 
     const userInfos = user.data.userInfos;

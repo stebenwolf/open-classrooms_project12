@@ -63,4 +63,10 @@
   background-color: #fbfbfb;
   border-radius: 5px;
 }
+
+.errorLoading {
+  margin-top: 200px;
+  margin-left: 50%;
+  color: black;
+}
 /*# sourceMappingURL=Profil.css.map */

@@ -13,6 +13,11 @@ The SportSee app displays the personal dashboard of a user. The user has access 
 
 > If you are running the micro API somewhere else than "http://localhost:3000" you'll need to update the base URL in `src/services/services.js` 
 
+### Prerequisites
+Node : v16.13.2
+IDE : VS Code 2019
+
+
 ### Fork the project. 
 
 ### Go to the project root directory :

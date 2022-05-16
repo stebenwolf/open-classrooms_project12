@@ -18,6 +18,7 @@ const style = {
 /**
  * Takes a floating number (ideally between 0 and 1) and returns a custom percentage for the score graph 
  * @param { Float } percentage - the initial score (ideally between 0 and 1 but would work with other numbers despite being then irrelevant).
+ * @returns { number } 
  */
 const endAngle = (percentage) => {
     return -(percentage/100)*360 +180
